@@ -1,3 +1,4 @@
+
 function Valida(Formulario){
 	if (Formulario.nom.value==""){
 		alert("El nombre no puede estar vacío.");
