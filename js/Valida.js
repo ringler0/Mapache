@@ -1,6 +1,6 @@
-
 function Valida(Formulario){
-	if (Formulario.nom.value==""){
+
+	if (Formulario.nom.value=="") {
 		alert("El nombre no puede estar vacío.");
 		Formulario.nom.focus();
 		return false;
@@ -24,9 +24,9 @@ function Valida(Formulario){
 		return false;
 	}
 
-	if (Formulario.fono.value < 9999999 and Formulario.fono.value >100000000){
-		alert("Agregue un numero de telefono valido.");
-		Formulario.fono.focus();
+	if (Formulario.fono.value=="") {
+		alert("Agregue un numero valido.");
+		Formulario.fono.focu();
 		return false;
 	}
 
@@ -34,19 +34,25 @@ function Valida(Formulario){
 		alert("La contraseña no puede estar vacío.");
 		Formulario.pass.focus();
 		return false;
-	}
-
-	if (Formulario.reppass.value == ""){
-		alert("La contraseña no puede estar vacío.");
-		Formulario.repass.focus();
-		return false;
-	}
-
-	if (Formulario.pass.value != Formulario.reppass.value){
+	}else if(Formulario.pass.value != Formulario.reppass.value){
 		alert("Su contraseña no coincide. Vuelva a ingresarla.");
 		Formulario.reppass.focus();
 		return false;
 	}
+
+	
+
+	if (Formulario.reppass.value == ""){
+		alert("Repita su contraseña.");
+		Formulario.repass.focus();
+		return false;
+	}else if (Formulario.pass.value != Formulario.reppass.value){
+		alert("Su contraseña no coincide. Vuelva a ingresarla.");
+		Formulario.reppass.focus();
+		return false;
+	}
+
+	
 
 	return true;
 }

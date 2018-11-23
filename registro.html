@@ -3,18 +3,46 @@
 <head>
 	<title>Registro</title>
 	<meta charset="utf-8">
+	<script type="text/javascript" src="js/Valida.js"></script>
+	<script>
+		$(document).ready(function(){
+			var consulta;
+
+			$("#email").focus();
+
+			$("#email").keyup(function(e){
+				consulta= $("#email").val();
+
+				$("#resultado").delay(1000).queue(function(n){
+					$("#resultado").html('<img src="ajax-loader.gif"/>');
+
+						$.ajax({
+							type: "POST",
+							url: "compruebaDisponibilidad.php",
+							data: "b="+consulta,
+							dataType: "html",
+							error: function(){
+								alert("error peticion");
+							},
+							success: function(data){
+								$("#resultado").html(data);
+								n();
+							}
+						})
+				})
+			})
+		})
+	</script>
 </head>
 <body>
-	<script type="text/javascript" src="valida.js"></script>
-
-	<form onsubmit= "return Valida(this);" action="" method="post">
+	<form onsubmit= "return Valida(this)" action="#" method="post">
 	<fieldset>
 		<legend>Registro</legend>
-		<label for="nom">Nombre: </label><input type="text" name="nom" id="nom" placeholder="  Nombre"><br>
+		Nombre: <input type="text" name="nom" id="nom" placeholder="  Nombre"><br>
 		Apellidos: <input type="text" name="ape" id="ape" placeholder="  Apellidos"><br>
 		Fecha de Nacimiento: <input type="date" name="fecha" id="fecha" ><br>
-		Correo Electronico: <input type="email" name="email" id="email" placeholder=" mapache@produccion.cl"><br>
-		Telefono: +56 9<input type="number" name="fono" id="fono" placeholder="  87654321"><br>
+		Correo Electronico: <input type="email" name="email" id="email" placeholder=" mapache@produccion.cl"><div id="resultado"></div><br>
+		Telefono: +56 9<input type="number" min="10000000" max="99999999" name="fono" id="fono"><br>
 		Contraseña: <input type="password" name="pass" id="pass" placeholder="  Contraseña"><br>
 		Repetir Contraseña: <input type="password" name="reppass" id="reppass" placeholder="  Repita Contraseña"><br>
 	</fieldset>
