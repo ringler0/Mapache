@@ -4,7 +4,9 @@
 	<title>Registro</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="estiloP.css">
+	<link rel="stylesheet" type="text/css" href="cssregistro.css">
 	<script type="text/javascript" src="js/Valida.js"></script>
+	<script type="text/javascript" src="jQuery.js"></script>
 	<script>
 		$(document).ready(function(){
 			var consulta;
@@ -42,7 +44,6 @@
 <div id="body">
       <div id="contenedor">
       <div id="header">
-        <h1>Mapache</h1>
       </div>
         <div id="nav">
           <ul class="menu">
@@ -65,23 +66,25 @@
             <li><a href="#">Contacto</a></li>
             <li><a href="registro.html">Inicia Sesion</a></li></div>
 
-      <div id="sectionF">
         <form onsubmit= "return Valida(this)" action="#" method="post">
 	<div id="Reg">
-		<legend id="legend">Registro</legend>
-		Nombre: <input type="text" name="nom" id="nom" placeholder="  Nombre"><br>
-		Apellidos: <input type="text" name="ape" id="ape" placeholder="  Apellidos"><br>
-		Fecha de Nacimiento: <input type="date" name="fecha" id="fecha" ><br>
-		Correo Electronico: <input type="email" name="email" id="email" placeholder=" mapache@produccion.cl"><div id="resultado"></div><br>
-		Telefono: +56 9<input type="number" min="10000000" max="99999999" name="fono" id="fono"><br>
-		Contraseña: <input type="password" name="pass" id="pass" placeholder="  Contraseña"><br>
-		Repetir Contraseña: <input type="password" name="reppass" id="reppass" placeholder="  Repita Contraseña"><br>
-		<input type="submit" value="Ingresar">
+		<p class="texto">Registro</p>
+	<div class="Registro">
+	<form method="post" action="#">
+
+	<span class="fontawesome-user"></span><input type="text" required placeholder="Nombre" autocomplete="off" id="nom">
+	<span class="fontawesome-user"></span><input type="text" required placeholder="Apellido" autocomplete="off" id="ape"> 
+	<span class="fontawesome-calendar"></span><input type="date" required placeholder="Fecha de Nacimiento" autocomplete="off" title="Fecha de Nacimiento" id="fecha"> 
+	<span class="fontawesome-envelope-alt"></span><input type="text" id="email" required placeholder="Correo" autocomplete="off">
+	<span class="fontawesome-phone"></span><input type="number" id="fono" required placeholder="Telefono" autocomplete="off" min="10000000" max="99999999" title="Sin incluir +569">
+	<span class="fontawesome-lock"></span><input type="password" name="password" id="pass" required placeholder="Contraseña" autocomplete="off"> 
+	<span class="fontawesome-lock"></span><input type="password" name="password" id="repass" required placeholder="Repita Contraseña" autocomplete="off"><br>
+			<input type="submit" value="Registrar" title="Registra tu cuenta">
 	</div>
 	</form>
       
 
-</div>
+
 <div id="footer"></div>
 </div>
 	
