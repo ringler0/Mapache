@@ -49,8 +49,8 @@
 			<input type="text" name="email" placeholder="Correo electronico: " class="form-control"><br>
 			<label for="nombre">Contraseña:</label>
 			<input type="password" name="pass" placeholder="Contraseña: " class="form-control"><br>
-			<button class="btn btn-link"><a href="registro.php">¿Aun no estas Registrado?</a></button>
-			<button class="btn btn-link">¿Olvido su Contraseña?<a href="nuevaPass.php">Recuperar</a></button>
+			<button class="btn btn-link" type=""><a href="registro.php">¿Aun no estas Registrado?</a></button>
+			<button class="btn btn-link" type=""><a href="nuevaPass.php">¿Olvido su Contraseña? Recuperar</a></button>
 		</div>
 
 

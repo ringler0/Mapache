@@ -46,7 +46,7 @@
 
 		<div class="form-group login col-md-5">
 			<label for="email">Correo electronico:</label>
-			<input type="email" name="email" placeholder="Correo electronico: " class="form-control"><br>
+			<input type="email" name="email" placeholder="Correo electronico: " class="form-control" required><br>
 		</div>
 
 

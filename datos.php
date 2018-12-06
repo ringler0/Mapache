@@ -8,7 +8,7 @@ ob_start();
 	$Telefono = $_GET["fono"];
 	$Password = $_GET["pass"];
 
-	$Insert = "INSERT INTO `prueba`(`Nombre`, `Apellido`, `FechadeNacimiento`, `email`, `Telefono`, `Password`) VALUES ('$Nombre', '$Apellido', '$FechaNacimiento', '$Email','$Telefono','$Password')";
+	$Insert = "INSERT INTO `prueba`(`Nombre`, `Apellido`, `FechadeNacimiento`, `email`, `Telefono`, `Pass`) VALUES ('$Nombre', '$Apellido', '$FechaNacimiento', '$Email','$Telefono','$Password')";
 
 	$Agregar = mysqli_query($db, $Insert);
 

@@ -3,8 +3,10 @@ include("conex.inc");
 	$Email = $_GET["email"];
 	$Password = $_GET["pass"];
 
-	$consulta = "UPDATE 'prueba' SET 'Password' = '$Password' WHERE 'email'= '$Email'";
+	$consulta = "UPDATE prueba SET Pass = '$Password' WHERE email= '$Email'";
 	$respuesta = mysqli_query($db, $consulta);
 
-	header("Location: login.php");
+	if ($respuesta) {
+		echo "Cambio de clave realizado";
+	}
 ?>

@@ -19,7 +19,7 @@
       </div>
         <div id="nav">
           <ul class="menu">
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.php">Inicio</a></li>
             <li><a href="#">Galeria</a>
                 <ul class="submenu">
                   <li><a href="#">2017</a></li>
@@ -36,7 +36,7 @@
             </li>
             <li><a href="#">Cotiza</a></li>
             <li><a href="#">Contacto</a></li>
-            <li><a href="registro.html">Inicia Sesion</a></li></div>
+            <li><a href="login.php">Inicia Sesion</a></li></div>
 
         <form onsubmit= "return Valida(this)" action="correo.php" method="post">
 	<div id="Reg">
@@ -50,17 +50,19 @@
 	<span class="fontawesome-phone"></span><input type="number" name="fono" required placeholder="Telefono" autocomplete="off" min="10000000" max="99999999" title="Sin incluir +569">
 	<span class="fontawesome-lock"></span><input type="password" name="pass" id="pass" required placeholder="Contraseña" autocomplete="off"> 
 	<span class="fontawesome-lock"></span><input type="password" name="repassword" id="repass" required placeholder="Repita Contraseña" autocomplete="off"><br>
-			<input type="submit" value="Registrar" title="Registra tu cuenta">
-	</div>
-	</form>
-  <div class="error">
+  <div style="color:white; text-align: center;">
     <?php
     if(isset($_GET["error"])){
       $error = $_GET["error"];
       echo $error;
     }
   ?> 
+  <br>
   </div>
+			<input type="submit" value="Registrar" title="Registra tu cuenta">
+	</div>
+	</form>
+  
    
 
 

@@ -1,14 +1,19 @@
+<?php
+  ob_start();
+  $Email = $_GET["correo"];
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Login</title>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0 , maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="estiloP.css">
+  <meta charset="utf-8">
+  <title>Cambio Password</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0 , maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="estiloP.css">
 </head>
 <body>
-	<center>
+  <center>
         <img src="LogoMapache.png" width="200" height="200">
       </center>
 <div id="body">
@@ -40,29 +45,30 @@
             <br>
             <br>
 
-	<div class="container">
-		<br>
-		<form action="cambioPass.php" method="get">
+  <div class="container">
+    <br>
+    <form action="cambioPass.php" method="get">
 
-		<div class="form-group login col-md-5">
-      <input type="hidden" name="email" value="<?php echo $email">
-			<label for="nombre">Ingrese nueva contraseña:</label>
+      
+    <div class="form-group login col-md-5">
+      <input type="hidden" name="email" value="<?php echo $Email ?>">
+      <label for="nombre">Ingrese nueva contraseña:</label>
       <input type="password" name="pass" placeholder="Ingrese nueva contraseña: " class="form-control"><br>
-		</div>
+    </div>
 
 
-		<button class="btn btn-primary" type="submit">Log In</button>
+    <button class="btn btn-primary" type="submit">Cambiar Contraseña</button>
 
-	</form>
-	<?php
-	    if(isset($_GET["error"])){
-	      $error = $_GET["error"];
-	      echo "<p style='text-align:center; color:white;'>$error</p>";
-	    }
-  	?>
-	</div>
+  </form>
+  <?php
+      if(isset($_GET["error"])){
+        $error = $_GET["error"];
+        echo "<p style='text-align:center; color:white;'>$error</p>";
+      }
+    ?>
+  </div>
 
-	<script src="Bootstrap/js/jQuery.js"></script>
-	<script src="Bootstrap/js/bootstrap.min.js"></script>
+  <script src="Bootstrap/js/jQuery.js"></script>
+  <script src="Bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

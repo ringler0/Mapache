@@ -4,19 +4,21 @@
 	$Email = $_POST["email"];
 	$Password = $_POST["pass"];
 
-	$consulta = "SELECT 'Nombre' ,`email`, `Password` FROM `prueba` WHERE 'email'= '$Email' AND 'Password' = '$Password' ";
+	$consulta = "SELECT * FROM prueba WHERE email = '$Email' AND Pass = '$Password' ";
 	$respuesta = mysqli_query($db, $consulta);
 
 	$fila = mysqli_fetch_object($respuesta);
 	$user = $fila->Nombre;
-	if ($fila->email == $$Email && $fila->Password == $Password) {
+	$correo = $fila->email;
+	$pass = $fila->Pass;
+	if ($correo == $Email && $pass == $Password) {
 		$_SESSION["estado"] = "conectado";
 		$_SESSION["nombre"] = $user;
 
-		header("Location:index..php?conect=Bienvenido +$user");
+		header("Location:index.php?conect=Bienvenido +$user");
 	}
 
-	if ($fila->email != $Email || $fila->Password != $Password) {
+	if ($correo != $Email || $pass != $Password) {
 		header("Location: login.php?error=Usuario+o+Clave+erronea");
 	}
 
