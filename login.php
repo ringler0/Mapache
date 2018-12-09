@@ -34,7 +34,7 @@
                 </ul>
             </li>
             <li><a href="cotiza.php">Cotiza</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="contacto.php">Contacto</a></li>
             <li><a href="login.php">Inicia Sesion</a></li></div>
 
             <br>
