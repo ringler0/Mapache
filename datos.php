@@ -13,12 +13,8 @@ ob_start();
 	$Agregar = mysqli_query($db, $Insert);
 
 	if ($Agregar) {
-			echo "<br>perfil almacenado. <br />";
-		}
-		else {
-			echo "error en la ejecución de la consulta. <br />";
+			header("Location:registro.php?enviado=Se+ha+registrado+correctamente");
 		}
 
-	#header("Location: index.html");
 	
 ?>

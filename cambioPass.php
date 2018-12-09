@@ -7,6 +7,6 @@ include("conex.inc");
 	$respuesta = mysqli_query($db, $consulta);
 
 	if ($respuesta) {
-		echo "Cambio de clave realizado";
+		header("Location: ingresoNuevaPass.php?enviado=Cambio+de+clave+realizado");
 	}
 ?>

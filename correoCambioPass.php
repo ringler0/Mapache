@@ -19,6 +19,7 @@ include("conex.inc");
 		
 		$envio = mail($Email,$asunto,$mensaje,$headers);
 			echo "Hemos enviado un correo a su e-mail para cambiar su contraseña";
+			header("Location:nuevaPass.php?enviado=Se+ha+enviado+un+email+de+confirmacion+para+completar+su+cambio+de+clave");
 	}else{
 		header("Location:nuevaPass.php?error=No+existe+este+correo");
 	}

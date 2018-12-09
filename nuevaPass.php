@@ -32,34 +32,42 @@
                   <li><a href="#">Servicio 3</a></li>
                 </ul>
             </li>
-            <li><a href="#">Cotiza</a></li>
+            <li><a href="cotiza.php">Cotiza</a></li>
             <li><a href="#">Contacto</a></li>
             <li><a href="login.php">Inicia Sesion</a></li></div>
 
             <br>
             <br>
             <br>
+            <?php
+          if (isset($_GET["enviado"])) {
+            $enviado = $_GET["enviado"];
+            echo "<p style='text-align:center; color:white;'>$enviado</p>";
+          }else{
+        ?>
+        	<div class="container">
+        		<br>
+        		<form action="correoCambioPass.php" method="get">
 
-	<div class="container">
-		<br>
-		<form action="correoCambioPass.php" method="get">
-
-		<div class="form-group login col-md-5">
-			<label for="email">Correo electronico:</label>
-			<input type="email" name="email" placeholder="Correo electronico: " class="form-control" required><br>
-		</div>
+        		<div class="form-group login col-md-5">
+        			<label for="email">Correo electronico:</label>
+        			<input type="email" name="email" placeholder="Correo electronico: " class="form-control" required><br>
+        		</div>
 
 
-		<button class="btn btn-primary" type="submit">Enviar</button>
+        		<button class="btn btn-primary" type="submit">Enviar</button>
 
-	</form>
-	<?php
-	    if(isset($_GET["error"])){
-	      $error = $_GET["error"];
-	      echo "<p style='text-align:center; color:white;'>$error</p>";
-	    }
-  	?>
-	</div>
+        	</form>
+        	<?php
+        	    if(isset($_GET["error"])){
+        	      $error = $_GET["error"];
+        	      echo "<p style='text-align:center; color:white;'>$error</p>";
+        	    }
+          	?>
+        	</div>
+          <?php
+             }
+          ?>
 
 	<script src="Bootstrap/js/jQuery.js"></script>
 	<script src="Bootstrap/js/bootstrap.min.js"></script>

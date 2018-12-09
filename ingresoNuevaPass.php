@@ -37,7 +37,7 @@
                   <li><a href="#">Servicio 3</a></li>
                 </ul>
             </li>
-            <li><a href="#">Cotiza</a></li>
+            <li><a href="cotiza.php">Cotiza</a></li>
             <li><a href="#">Contacto</a></li>
             <li><a href="login.php">Inicia Sesion</a></li></div>
 
@@ -45,28 +45,37 @@
             <br>
             <br>
 
-  <div class="container">
-    <br>
-    <form action="cambioPass.php" method="get">
+            <?php
+          if (isset($_GET["enviado"])) {
+            $enviado = $_GET["enviado"];
+            echo "<p style='text-align:center; color:white;'>$enviado</p>";
+          }else{
+          ?>
+            <div class="container">
+              <br>
+              <form action="cambioPass.php" method="get">
 
-      
-    <div class="form-group login col-md-5">
-      <input type="hidden" name="email" value="<?php echo $Email ?>">
-      <label for="nombre">Ingrese nueva contraseña:</label>
-      <input type="password" name="pass" placeholder="Ingrese nueva contraseña: " class="form-control"><br>
-    </div>
+                
+              <div class="form-group login col-md-5">
+                <input type="hidden" name="email" value="<?php echo $Email ?>">
+                <label for="nombre">Ingrese nueva contraseña:</label>
+                <input type="password" name="pass" placeholder="Ingrese nueva contraseña: " class="form-control"><br>
+              </div>
 
 
-    <button class="btn btn-primary" type="submit">Cambiar Contraseña</button>
+              <button class="btn btn-primary" type="submit">Cambiar Contraseña</button>
 
-  </form>
-  <?php
-      if(isset($_GET["error"])){
-        $error = $_GET["error"];
-        echo "<p style='text-align:center; color:white;'>$error</p>";
-      }
-    ?>
-  </div>
+            </form>
+            <?php
+                if(isset($_GET["error"])){
+                  $error = $_GET["error"];
+                  echo "<p style='text-align:center; color:white;'>$error</p>";
+                }
+              ?>
+            </div>
+          <?php
+            }
+          ?>
 
   <script src="Bootstrap/js/jQuery.js"></script>
   <script src="Bootstrap/js/bootstrap.min.js"></script>

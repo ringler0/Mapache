@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,7 +33,7 @@
                   <li><a href="#">Servicio 3</a></li>
                 </ul>
             </li>
-            <li><a href="#">Cotiza</a></li>
+            <li><a href="cotiza.php">Cotiza</a></li>
             <li><a href="#">Contacto</a></li>
             <li><a href="login.php">Inicia Sesion</a></li></div>
 

@@ -32,7 +32,7 @@ ob_start();
 	if ($verificar == 0) {
 		$envio = mail($Email,$asunto,$mensaje,$headers);
 		echo "Su e-mail se a enviado correctamente.";
-		#header("Location: index.html");
+		header("Location: registro.php?enviado=Se+ha+enviado+un+email+de+confirmacion+para+completar+su+registro");
 	}else{
 		header("Location: registro.php?error=Este+usuario+ya+ha+sido+registrado+anteriormente");
 	}

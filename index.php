@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
 <html lang="es">
   <head>
@@ -29,9 +32,21 @@
                   <li><a href="#">Servicio 3</a></li>
                 </ul>
             </li>
-            <li><a href="#">Cotiza</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="login.php">Inicia Sesion</a></li></div>
+            <li><a href="cotiza.php">Cotiza</a></li>
+            <li><a href="contacto.php">Contacto</a></li>
+            <li></li>
+            <li><?php
+                  if ($_SESSION["nombre"]) {
+                    echo "Bienvenido ".$_SESSION["nombre"];
+                    echo("<a href='cerrarSesion.php'>Cerrar Sesion</a>");
+                  }else{
+                ?>
+                <a href="login.php">Inicia Sesion</a>
+                <?php
+                  }
+                ?>
+            </li>
+          </div>
             
       <div id="section">
           <left><h1>Mapache Producciones</h1></left>
