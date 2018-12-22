@@ -4,6 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Login</title>
+  <script type="text/javascript" src="js/Valida.js"></script>
+  <script type="text/javascript" src="js/jQuery.js"></script>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0 , maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="estiloP.css">
@@ -43,14 +45,14 @@
 
 	<div class="container">
 		<br>
-		<form action="ValidaLogin.php" onsubmit="return Valida(this)" method="post">
+		<form action="ValidaLogin.php" onsubmit="return ValidaLogin(this)" method="post">
 
 		<div class="form-group login col-md-5">
 			<label for="email">Correo electronico:</label>
 			<input type="text" name="email" placeholder="Correo electronico: " class="form-control"><br>
 			<label for="nombre">Contraseña:</label>
 			<input type="password" name="pass" placeholder="Contraseña: " class="form-control"><br>
-			<button class="btn btn-link" type=""><a href="registro.php">¿Aun no estas Registrado?</a></button>
+			<button class="btn btn-link" type=""><a href="registro.php">¿Aun no estas Registrado? Haga click aqui</a></button>
 			<button class="btn btn-link" type=""><a href="nuevaPass.php">¿Olvido su Contraseña? Recuperar</a></button>
 		</div>
 

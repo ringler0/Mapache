@@ -51,13 +51,13 @@
         	<div id="Reg">
         		<p class="texto">Registro</p>
         	<div class="Registro">
-          	<span class="fontawesome-user"></span><input type="text" required placeholder="Nombre" autocomplete="off" name="nom">
-          	<span class="fontawesome-user"></span><input type="text" required placeholder="Apellido" autocomplete="off" name="ape"> 
-          	<span class="fontawesome-calendar"></span><input type="date" required placeholder="Fecha de Nacimiento" autocomplete="off" title="Fecha de Nacimiento" name="fecha"> 
-          	<span class="fontawesome-envelope-alt"></span><input type="text" id="email" name="email" required placeholder="Correo" autocomplete="off">
-          	<span class="fontawesome-phone"></span><input type="number" name="fono" required placeholder="Telefono" autocomplete="off" min="10000000" max="99999999" title="Sin incluir +569">
-          	<span class="fontawesome-lock"></span><input type="password" name="pass" id="pass" required placeholder="Contraseña" autocomplete="off"> 
-          	<span class="fontawesome-lock"></span><input type="password" name="repassword" id="repass" required placeholder="Repita Contraseña" autocomplete="off"><br>
+          	<span class="fontawesome-user"></span><input type="text" placeholder="Nombre" autocomplete="off" name="nom">
+          	<span class="fontawesome-user"></span><input type="text" placeholder="Apellido" autocomplete="off" name="ape"> 
+          	<span class="fontawesome-calendar"></span><input type="date" placeholder="Fecha de Nacimiento" autocomplete="off" title="Fecha de Nacimiento" name="fecha"> 
+          	<span class="fontawesome-envelope-alt"></span><input type="text" id="email" name="email" placeholder="Correo" autocomplete="off">
+          	<span class="fontawesome-phone"></span><input type="number" name="fono" placeholder="Telefono" autocomplete="off"  title="Sin incluir +569">
+          	<span class="fontawesome-lock"></span><input type="password" name="pass" id="pass" placeholder="Contraseña" autocomplete="off"> 
+          	<span class="fontawesome-lock"></span><input type="password" name="repassword" id="repass" placeholder="Repita Contraseña" autocomplete="off"><br>
             <div style="color:white; text-align: center;">
               <?php
               if(isset($_GET["error"])){

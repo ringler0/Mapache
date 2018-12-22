@@ -10,7 +10,7 @@ include("conex.inc");
 	$Nombre = $fila->Nombre;
 	$correo= $fila->email;
 	if ($Email == $correo) {
-		$mensaje = "<h2>Se te olvido tu contraseña $Nombre</h2>
+		$mensaje = "<h2>Solicitaste un cambio de contraseña $Nombre</h2>
 		<p>Para ingresar una nueva contraseña haga click <a href='http://prueba.mapacheproducciones.cl/ingresoNuevaPass.php?correo=$Email'>Aqui</a></p>";
 		$asunto = "Cambio de Contraseña";
 		$headers = "MIME-Version: 1.0\r\n"; 

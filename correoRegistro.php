@@ -20,9 +20,17 @@ ob_start();
 		}
 	}
 
-	$mensaje = "<h2>Gracias por registrarte $Nombre</h2>
-		<p>Wena ctm compare $Apellido</p><br>
-		<p>Para completar su registro haga click <a href='http://prueba.mapacheproducciones.cl/datos.php?nom=$Nombre&ape=$Apellido&fecha=$FechaNacimiento&email=$Email&fono=$Telefono&pass=$Password'>Aqui</a></p>";
+	$mensaje = "<div style='text-align: center;'>
+		<a href='prueba.mapacheproducciones.cl'><img src='LogoMapache.png'></a>
+	</div>
+	<div style='text-align: center; background-color: #99FFFF; border-radius: 2em;'>
+		<h2>Gracias por registrarte en Mapache Producciones</h2>
+		<h4>¡Bienvenido ".$Nombre." ".$Apellido."!</h4><br>
+		<p>Para completar su registro haga click en el siguiente link</p><br>
+		<button><a href='http://prueba.mapacheproducciones.cl/datos.php?nom=$Nombre&ape=$Apellido&fecha=$FechaNacimiento&email=$Email&fono=$Telefono&pass=$Password'>Aqui</a></button><br>
+		<p>Ahora podras cotizar nuestros servicios y contactarse con nosotros en la ventana contacto</p>
+		
+	</div>";
 	$asunto = "Verificación de Registro";
 	$headers = "MIME-Version: 1.0\r\n"; 
 	$headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 

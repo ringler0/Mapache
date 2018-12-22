@@ -12,11 +12,14 @@
 	$apellido = $fila->Apellido;
 	$correo = $fila->email;
 	$pass = $fila->Pass;
+	$num = $fila->Telefono;
 	if ($correo == $Email && $pass == $Password) {
 		$_SESSION["estado"] = "conectado";
 		$_SESSION["nombre"] = $user;
 		$_SESSION["apellido"] = $apellido;
 		$_SESSION["email"] = $correo;
+		$_SESSION["pass"] = $Password;
+		$_SESSION["numero"] = $num;
 
 		header("Location:index.php");
 	}

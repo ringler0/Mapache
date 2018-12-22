@@ -1,4 +1,5 @@
 <?php
+  session_start();
   ob_start();
   $Email = $_GET["correo"];
 ?>
@@ -39,7 +40,19 @@
             </li>
             <li><a href="cotiza.php">Cotiza</a></li>
             <li><a href="#">Contacto</a></li>
-            <li><a href="login.php">Inicia Sesion</a></li></div>
+            <li><?php
+                  if ($_SESSION["nombre"]) {
+                    echo "Bienvenido ".$_SESSION["nombre"];
+                    echo("<a href='cerrarSesion.php'>Cerrar Sesion</a>");
+                    echo("<li><a href='perfil.php'>Perfil</a></li>");
+                  }else{
+                ?>
+                <a href="login.php">Inicia Sesion</a>
+                <?php
+                  }
+                ?>
+              </li>
+            </div>
 
             <br>
             <br>

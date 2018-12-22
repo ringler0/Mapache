@@ -39,6 +39,7 @@ session_start();
                   if ($_SESSION["nombre"]) {
                     echo "Bienvenido ".$_SESSION["nombre"];
                     echo("<a href='cerrarSesion.php'>Cerrar Sesion</a>");
+                    echo("<li><a href='perfil.php'>Perfil</a></li>");
                   }else{
                 ?>
                 <a href="login.php">Inicia Sesion</a>

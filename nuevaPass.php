@@ -1,3 +1,11 @@
+<?php
+session_start();
+$Email = $_SESSION['email'];
+$estado = $_SESSION['estado'];
+if ($estado=="conectado") {
+  header("Location:ingresoNuevaPass.php?correo=$Email");
+}else{
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +42,19 @@
             </li>
             <li><a href="cotiza.php">Cotiza</a></li>
             <li><a href="#">Contacto</a></li>
-            <li><a href="login.php">Inicia Sesion</a></li></div>
+            <li><?php
+                  if ($_SESSION["nombre"]) {
+                    echo "Bienvenido ".$_SESSION["nombre"];
+                    echo("<a href='cerrarSesion.php'>Cerrar Sesion</a>");
+                    echo("<li><a href='perfil.php'>Perfil</a></li>");
+                  }else{
+                ?>
+                <a href="login.php">Inicia Sesion</a>
+                <?php
+                  }
+                ?>
+              </li>
+            </div>
 
             <br>
             <br>
@@ -73,3 +93,6 @@
 	<script src="Bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
+<?php
+}
+?>
