@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>cotiza</title>
+<link href="css/bootstrap-4.0.0.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/Cotiza_css.css">
+<script type="text/javascript" src="cotizando.js"></script>
+</head>
+
+<body>	
+	<div class="contenedor">
+		<div class="menu">
+		<center>
+        <img src="LogoMapache.png" width="200" height="200">
+      </center>
+<div id="body">
+      
+        <div id="nav">
+          <ul class="menu">
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="#">Galeria</a>
+                <ul class="submenu">
+                  <li><a href="#">2017</a></li>
+                  <li><a href="#">2018</a></li>
+                  <li><a href="#">2019</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Servicios</a>
+                <ul class="submenu">
+                  <li><a href="#">Servicio 1</a></li>
+                  <li><a href="#">Servicio 2</a></li>
+                  <li><a href="#">Servicio 3</a></li>
+                </ul>
+            </li>
+            <li><a href="cotiza.php">Cotiza</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="login.php">Inicia Sesion</a></li></div>
+
+		
+		<div id="formulario">
+			<h1 class="texto">Cotiza</h1>
+		  <form class="form">
+			  <div class="Registro">
+			  	<h1 class="texto">Tipo Evento</h1>
+			  	<br>
+			  	<br>
+			  	<div class="tipo_evento">
+			  	  <label class="radio">
+			  	  <input type="radio" name="evento" value="Matrimonio" id="Matrimonio">matrimonio
+			  	  <span class="check"></span>
+				  </label>
+
+				  <br>
+
+				  <label class="radio">
+			  	  <input type="radio" name="evento" value="Bautizo" id="Bautizo">Bautizo
+				  <span class="check"></span>
+				  </label>
+
+				  <br>
+				  <label class="radio">
+				  <input type="radio" name="evento" value="Cumpleaños" id="Cumpleaños">Cumpleaños
+				  <span class="check"></span>
+				  </label>
+				  <br>
+				  <label class="radio">
+				  <input type="radio" name="evento" value="Otro" id="Otro">Otro
+				  <span class="check"></span>
+				  </label>
+				 </div>
+
+			  <br>
+			  <h1 class="texto">Servicios</h1>
+			  <br>
+			  <br>
+			  <div class="tipos_servicios">
+				  <label class="radio">
+				  <input type="checkbox" id="Fotografia">Fotografia
+				  <span class="check"></span>
+				  </label>
+
+				  <br>
+
+				  <label class="radio">
+				  <input type="checkbox" id="Video">Video
+				  <span class="check"></span>
+				  </label>
+				  
+				  <br>
+
+				  <label class="radio">
+				  <input type="checkbox" id="Dj">Dj
+				  <span class="check"></span>
+				  </label>
+				  
+				  <br>
+
+				  <label class="radio">
+				  <input type="checkbox" id="Luz">Iluminacion
+				  <span class="check"></span>
+				  </label>
+
+				  <br>
+
+				  <label class="radio">
+				  <input type="checkbox" id="Recepcion">Recepcion
+				  <span class="check"></span>
+				  </label>
+
+				  <br>
+
+				  <label class="radio">
+				  <input type="checkbox" id="Musica_Vivo">Banda musical
+				  <span class="check"></span>
+				  </label>
+				  <br>
+
+				  <label class="radio">
+				  <input type="checkbox" id="Karaoke">Karaoke
+				  <span class="check"></span>
+				  </label>
+				  <br>
+
+
+				  <input type="button" value="Cotiza" onclick="Cotiza()">
+				  <br>
+		  </form>
+		  </div>
+			      
+			 
+        </div>
+	</div>
+	<h1 class="texto" >El aproximado de la cotizacion es:</h1>
+	<h1 id="Valor" class="texto"></h1>
+</body>
+</html>
