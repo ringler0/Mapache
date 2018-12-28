@@ -47,7 +47,8 @@ session_start();
 </div>
 </div>
 </div>
-  
+  <script src="Bootstrap/js/jQuery.js"></script>
+  <script src="Bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 
