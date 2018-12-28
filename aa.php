@@ -7,7 +7,7 @@ session_start();
     <meta charset="utf-8">
     <title>Mapache Producciones</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -27,8 +27,8 @@ session_start();
   <h5 class="col-sm-2 text-center">
     <?php
       if ($_SESSION["nombre"]) {
-        echo "Bienvenido ".$_SESSION["nombre"];
-        echo("<a href='cerrarSesion.php'>Cerrar Sesion</a>");
+        echo "<h5 class='col-sm-2 text-center'>Bienvenido ".$_SESSION['nombre']."</h5>";
+        echo("<h5 class='col-sm-2 text-center'><a href='cerrarSesion.php'>Cerrar Sesion</a></h5>");
         echo("<h5 class='col-sm-2 text-center'><a href='perfil.php'>Perfil</a></h5>");
       }else{
     ?>
