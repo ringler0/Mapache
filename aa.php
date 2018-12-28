@@ -9,7 +9,9 @@ session_start();
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<div class="bg-dark">
+
+<body>
+  <div class="bg-dark">
       <center class="container-fluid bg-dark">
 
         <img src="LogoMapache.png" width="320" height="320">
@@ -45,6 +47,8 @@ session_start();
 </div>
 </div>
 </div>
+  
+</body>
 
 
   </html>
