@@ -20,23 +20,21 @@ session_start();
 <div class="container-fluid bg-dark mt-5">
 
     <div class="row bg-info text-white">
-  <h5 class="col-sm-2 text-center"><a href="index.php">Inicio</a></h5>
-    <h5 class="col-sm-2 text-center"><a href="galeria.php">Galeria</a></h5>
-  <h5 class="col-sm-2 text-center"><a href="servicio.php">Servicios</a></h5>
-  <h5 class="col-sm-2 text-center"><a href="cotiza.php">Cotiza</a></h5>
-  <h5 class="col-sm-2 text-center">
+  <h5 class="col-sm-2 text-center"><a href="index.php" style="color: white">Inicio</a></h5>
+    <h5 class="col-sm-2 text-center"><a href="galeria.php" style="color: white">Galeria</a></h5>
+  <h5 class="col-sm-2 text-center"><a href="servicio.php" style="color: white">Servicios</a></h5>
+  <h5 class="col-sm-2 text-center"><a href="cotiza.php" style="color: white">Cotiza</a></h5>
     <?php
       if ($_SESSION["nombre"]) {
+        echo("<h5 class='col-sm-2 text-center'><a href='cerrarSesion.php' style='color: white'>Cerrar Sesion</a></h5>");
+        echo("<h5 class='col-sm-2 text-center'><a href='perfil.php' style='color: white'>Perfil</a></h5>");
         echo "<h5 class='col-sm-2 text-center'>Bienvenido ".$_SESSION['nombre']."</h5>";
-        echo("<h5 class='col-sm-2 text-center'><a href='cerrarSesion.php'>Cerrar Sesion</a></h5>");
-        echo("<h5 class='col-sm-2 text-center'><a href='perfil.php'>Perfil</a></h5>");
       }else{
     ?>
-    <a href="login.php">Inicia sesion</a>
+    <h5 class="col-sm-2 text-center"><a href="login.php" style="color: white">Inicia sesion</a> </h5>
     <?php
       }
     ?>
-  </h5>
 
 </div>
 
